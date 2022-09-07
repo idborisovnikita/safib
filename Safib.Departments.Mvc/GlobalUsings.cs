@@ -1,0 +1,17 @@
+﻿global using AutoMapper;
+global using Microsoft.AspNetCore.Http;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.AspNetCore.SignalR;
+global using Safib.Departments.Mvc.Configuration.Automapper;
+global using Safib.Departments.Mvc.Dto;
+global using Safib.Departments.Mvc.Extensions;
+global using Safib.Departments.Mvc.Models;
+global using Safib.Departments.Mvc.Services.Interfaces;
+global using Safib.Departments.Mvc.Services;
+global using Safib.Departments.Mvc.ViewModels;
+global using Safib.Departments.Mvc;
+global using Serilog;
+global using System.Diagnostics;
+global using System.Text.Json.Serialization;
+global using System.Text.Json;
+global using System.Text;

@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-6">
+        <div class="tree">
+            <span id="service-unavailable" class="d-none text-danger">Сервис недоступен</span>
+            <ul class="list-group" data-bind="template: {name:'tree-node', foreach: departments}"></ul>
+        </div>
+
+        <script id="tree-node" type='text/html'>
+            <li>
+                <span data-bind="text:name"></span>
+                <span data-bind="ifnot: enabled" class="text-danger">banned</span>
+                <ul data-bind="template: {name:'tree-node', foreach: departments}"></ul>
+            </li>
+        </script>
+    </div>
+    <div class="col-6">
+        @await Html.PartialAsync("_Import")
+    </div>
+</div>
+
+

@@ -1,0 +1,9 @@
+﻿@model ImportResultViewModel
+
+@if (Model.Success) {
+    <p>Успешно синхронизировано</p>
+}
+else {
+    <p>Ошибка</p>
+}
+<p>@Model.Message</p>

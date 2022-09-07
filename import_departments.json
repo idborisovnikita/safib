@@ -1,0 +1,68 @@
+[
+   {
+      "name":"Imported Department 1",
+      "enabled":false,
+      "departments":[
+         {
+            "name":"Imported Department 1.1",
+            "enabled":false,
+            "departments":[
+               
+            ]
+         },
+         {
+            "name":"Imported Department 1.2",
+            "enabled":false,
+            "departments":[
+               {
+                  "name":"Imported Department 1.2.1",
+                  "enabled":false,
+                  "departments":[
+                     
+                  ]
+               },
+               {
+                  "name":"Imported Department 1.2.2",
+                  "enabled":false,
+                  "departments":[
+                     {
+                        "name":"Imported Department 1.2.2.1",
+                        "enabled":false,
+                        "departments":[
+                           
+                        ]
+                     }
+                  ]
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "name":"Imported Department 2",
+      "enabled":false,
+      "departments":[
+         {
+            "name":"Imported Department 2.1",
+            "enabled":false,
+            "departments":[
+               
+            ]
+         },
+         {
+            "name":"Imported Department 2.2",
+            "enabled":false,
+            "departments":[
+               
+            ]
+         },
+         {
+            "name":"Imported Department 2.3",
+            "enabled":false,
+            "departments":[
+               
+            ]
+         }
+      ]
+   }
+]

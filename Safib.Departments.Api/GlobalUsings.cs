@@ -1,0 +1,15 @@
+﻿global using AutoMapper;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.EntityFrameworkCore.Metadata.Internal;
+global using Microsoft.EntityFrameworkCore;
+global using Safib.Departments.Api.Configuration.Automapper;
+global using Safib.Departments.Api.Configuration.Middleware;
+global using Safib.Departments.Api.DataAccess;
+global using Safib.Departments.Api.Dto;
+global using Safib.Departments.Api.Models;
+global using Safib.Departments.Api.Services.Interfaces;
+global using Safib.Departments.Api.Services;
+global using Safib.Departments.Api;
+global using Serilog;
+global using System.ComponentModel.DataAnnotations.Schema;
+global using System.ComponentModel.DataAnnotations;
