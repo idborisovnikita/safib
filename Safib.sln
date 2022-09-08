@@ -6,6 +6,10 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Safib.Departments.Api", "Safib.Departments.Api\Safib.Departments.Api.csproj", "{3BB8FB7F-2CDB-4E58-9D35-1A73DCCDC446}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{C88735F0-0819-4D04-8E38-0398AB2BE027}"
+	ProjectSection(SolutionItems) = preProject
+		import_departments.json = import_departments.json
+		README.md = README.md
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Safib.Departments.Mvc", "Safib.Departments.Mvc\Safib.Departments.Mvc.csproj", "{032C6C88-515D-4A89-A6DC-BCF4172F624C}"
 EndProject

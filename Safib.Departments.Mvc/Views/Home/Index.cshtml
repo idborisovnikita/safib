@@ -4,14 +4,16 @@
 
 <div class="row">
     <div class="col-6">
+        <span>Фильтр</span>
+        <input type="text" data-bind="value:searchterm, valueUpdate: 'afterkeydown'"/>
         <div class="tree">
             <span id="service-unavailable" class="d-none text-danger">Сервис недоступен</span>
             <ul class="list-group" data-bind="template: {name:'tree-node', foreach: departments}"></ul>
         </div>
 
         <script id="tree-node" type='text/html'>
-            <li>
-                <span data-bind="text:name"></span>
+            <li data-bind="visible: show">
+                <span data-bind="text:name, css: {highlight: highlight}"></span>
                 <span data-bind="ifnot: enabled" class="text-danger">banned</span>
                 <ul data-bind="template: {name:'tree-node', foreach: departments}"></ul>
             </li>

@@ -48,8 +48,9 @@
                         self.departments.push(newData[i]);
                     }
                 });
-
         }
+        self.searchterm = ko.observable();
+        self.searching = ko.observable(false);
     };
 
     function ModelDepartment(department, parent) {
@@ -64,9 +65,51 @@
                 }.bind(self))
                 : null
         );
+        self.show = ko.observable(true);
+        self.highlight = ko.observable(false);
     }
 
-    var viewModel = new AppViewModel();    
+    var viewModel = new AppViewModel();
+
+    var treeSearch = ko.computed(function () {
+        var tree = viewModel.departments(),
+            term = viewModel.searchterm(),
+            matchtype = "";
+
+        var down = function (root, text) {
+            var found;
+            ko.utils.arrayForEach(root, function (d) {
+                found = (new RegExp(matchtype + text, "ig").exec(d.name().trim(), "ig") instanceof Array)
+                d.highlight(found);
+                d.show(found);
+
+                ko.utils.arrayForEach(d.departments(), function (d) {
+                    found = (new RegExp(matchtype + text, "ig").exec(d.name().trim(), "ig") instanceof Array)
+                    d.highlight(found);
+                    d.show(found);
+                    down(d.departments(), text);
+                });
+            });
+
+            viewModel.searching(false);
+        };
+
+        var resetTree = function (root) {
+            ko.utils.arrayForEach(root, function (d) {
+                d.show(true);
+                d.highlight(false);
+                resetTree(d.departments());
+            });
+        };
+
+        if (term) {
+            viewModel.searching(true);
+            resetTree(tree);
+            down(tree, term);
+        } else {
+            resetTree(tree);
+        }
+    });
 
     ko.applyBindings(viewModel);
 });
